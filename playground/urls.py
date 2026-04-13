@@ -6,5 +6,5 @@ urlpatterns = [
     # path('hello/', views.say_hello),
     # path('user/', views.get_user_data),
     path('', views.home),
-    path('post/<int:id>/', views.post)
+    path('post/<int:id>/', views.post, name='post_detail')
 ]

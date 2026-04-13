@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Post
 
@@ -25,5 +25,6 @@ def home(request):
     return render(request, 'home.html', {'posts' : posts})
 
 def post ( request, id):
-    post = Post.objects.get(id = id)
+    # post = Post.objects.get(id = id)
+    post = get_object_or_404(Post, id=id)
     return render( request, 'post.html', {'post' : post})
