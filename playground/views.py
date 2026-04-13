@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Posts
+from .models import Post
 
 # Create your views here.
 
@@ -21,9 +21,9 @@ def get_user_data (request):
     })
 
 def home(request):
-    posts = Posts.objects.all()
+    posts = Post.objects.all()
     return render(request, 'home.html', {'posts' : posts})
 
 def post ( request, id):
-    post = Posts.objects.get(id = id)
+    post = Post.objects.get(id = id)
     return render( request, 'post.html', {'post' : post})
