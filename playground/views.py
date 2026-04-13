@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Posts
 
 # Create your views here.
 
@@ -19,3 +20,10 @@ def get_user_data (request):
         "address": "lagos"
     })
 
+def home(request):
+    posts = Posts.objects.all()
+    return render(request, 'home.html', {'posts' : posts})
+
+def post ( request, id):
+    post = Posts.objects.get(id = id)
+    return render( request, 'post.html', {'post' : post})
