@@ -18,3 +18,4 @@ def get_user_data (request):
         "age": 10,
         "address": "lagos"
     })
+
