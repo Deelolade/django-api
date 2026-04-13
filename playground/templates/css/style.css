@@ -1,0 +1,18 @@
+.bg-success {
+    background: linear-gradient(135deg, #198754, #146c43);
+}
+
+.badge {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.badge:hover {
+    transform: scale(1.05);
+    background: #fff !important;
+    color: #198754 !important;
+}
+.search-bar{
+    outline: none;
+    
+}
